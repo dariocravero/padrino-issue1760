@@ -1,0 +1,9 @@
+= form_for :parent, url(:parents, :index) do |f|
+  = f.label :email
+  = f.text_field :email
+
+  = f.fields_for :children do |fi|
+    = fi.label :name
+    = fi.text_field :name
+
+  = f.submit
